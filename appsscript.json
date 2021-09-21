@@ -1,0 +1,31 @@
+{
+  "timeZone": "Europe/Warsaw",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Gmail",
+        "version": "v1",
+        "serviceId": "gmail"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "HTML Sender",
+      "logoUrl": "https://ssl.gstatic.com/docs/script/images/logo/script-64.png"
+    },
+    "gmail": {
+      "composeTrigger": {
+        "selectActions": [
+          {
+            "text": "Insert HTML to email",
+            "runFunction": "getComposeUI"
+          }
+        ],
+        "draftAccess": "METADATA"
+      }
+    }
+  }
+}
